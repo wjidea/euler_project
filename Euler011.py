@@ -27,7 +27,6 @@ for line in text011.split("\n"):
 
 # function to calculate multiplication in 8 directions
 def allDirectMultiply(x,y,numL):
-    prodL = []
     dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7 = 1,1,1,1,1,1,1,1
     if x < 0 or x > 19 or y < 0 or y > 19: return "out of range"
     # down
@@ -42,7 +41,7 @@ def allDirectMultiply(x,y,numL):
                 dir7 *= numL[y+i][x+i] # Direction 7 
     if y - 4 >= 0:
         for i in range(4):
-            dir4 *= numL[y-i][x]        # Direction 4
+            dir4 *= numL[y-i][x]       # Direction 4
         if x - 4 >= 0:
             for i in range(4):
                 dir3 *= numL[y-i][x-i] # Direction 3
